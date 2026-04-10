@@ -1,6 +1,17 @@
 //implementation of 8x1 mux using 4x1 mux
 
-`include "mux_4x1_behav.v"
+module mux_4x1(i0,i1,i2,i3,s,y);
+input i0,i1,i2,i3;
+input [1:0]s;
+output reg y;
+always@(*)begin
+    if(s==2'b00)y=i0;
+	  else if(s==2'b01)y=i1;
+	  else if(s==2'b10)y=i2;
+	  else y=i3;
+end
+endmodule
+
 module mux_8x1(i,s,y);
 input [7:0]i;
 input [2:0]s;
