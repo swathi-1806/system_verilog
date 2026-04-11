@@ -7,7 +7,6 @@ function new(mailbox #(transaction) mon2sbd);
 endfunction
 
 //run task
-
 task run();
 	transaction tx;
   bit [3:0]expected;
