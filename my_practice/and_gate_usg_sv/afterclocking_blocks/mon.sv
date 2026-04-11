@@ -23,19 +23,18 @@ mailbox #(transaction)mon2cov;
   task run();
     transaction tx;
     while (count < 5)begin	
-	@(vif.mon_cb);   // samples AFTER DUT updates 
-	  tx=new();
-	  //#5;
-	  tx.a = vif.mon_cb.a;
-	  tx.b = vif.mon_cb.b;
-	  tx.y = vif.mon_cb.y;
-	  mon2sbd.put(tx);
-	  mon2cov.put(tx);
-      count++;
+		@(vif.mon_cb);   // samples AFTER DUT updates 
+	  	tx=new();
+	  	tx.a = vif.mon_cb.a;
+	  	tx.b = vif.mon_cb.b;
+	  	tx.y = vif.mon_cb.y;
+	  	mon2sbd.put(tx);
+	  	mon2cov.put(tx);
+      	count++;
       
 	   $display("%0t-->[MON] a=%b  b=%b  y=%b ",$time,tx.a,tx.b,tx.y);
-
     end
+	  
   endtask
 endclass
 
