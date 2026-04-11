@@ -1,0 +1,17 @@
+interface and_if;
+	logic clk;
+    logic [3:0]a, b;
+	logic [4:0]y;
+
+	// Driver clocking block
+    clocking drv_cb @(posedge clk);
+        output a, b;
+    endclocking
+
+    // Monitor clocking block
+    clocking mon_cb @(posedge clk);
+        input #1 a, b, y;
+    endclocking
+
+	
+endinterface
