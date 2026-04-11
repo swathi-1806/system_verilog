@@ -10,7 +10,7 @@ interface and_if;
 
     // Monitor clocking block
     clocking mon_cb @(posedge clk);
-        input #1 a, b, y;
+        input #1 a, b, y;//This tells monitor:Sample 1 timestep after clock → after DUT updates.
     endclocking
 
 	
