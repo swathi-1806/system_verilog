@@ -14,7 +14,6 @@ class agent;
         bfm = new(vif, gen2bfm);
         mon = new(vif, mon2sbd, mon2cov);
         cov = new(mon2cov);
-
     endfunction
 
     task run();
