@@ -1,5 +1,6 @@
 //implementation of 8x1 mux using 4x1 mux
 
+//4x1 mux 
 module mux_4x1(i0,i1,i2,i3,s,y);
 input i0,i1,i2,i3;
 input [1:0]s;
@@ -12,15 +13,18 @@ always@(*)begin
 end
 endmodule
 
+//8x1 usg 4x1
 module mux_8x1(i,s,y);
 input [7:0]i;
 input [2:0]s;
 output reg y;
 wire w1,w2;
+//------------------------------------------------------------
 //mux_4x1 u1(.i(i[7:4]),.s(s[1:0]),.y(w1));
 //mux_4x1 u2(.i(i[3:0]),.s(s[1:0]),.y(w2));
 //mux_4x1 u3(.i(i[1'b0,1'b0,w2,w1]),.s([s[2],1'b0]),.y(y));
 //endmodule
+//------------------------------------------------------------
 
 mux_4x1 u1(
 .i0(i[0]),
