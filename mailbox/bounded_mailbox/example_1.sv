@@ -14,7 +14,7 @@ module tb;
       mbox.get(value);//get 1st item from mailbox nd convert it into int & store it in the value
       $display("value=%0d",value);
       
-      mbox.get(value);//get 2nd item from mailbox nd convert it into real & store it in the pi
+      mbox.get(pi);//get 2nd item from mailbox nd convert it into real & store it in the pi
       $display("pi=%0.2f",pi);
       
     end
