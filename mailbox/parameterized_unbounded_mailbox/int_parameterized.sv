@@ -20,7 +20,7 @@ module tb;
       $display("pi=%0d",pi);
       
       mbox.try_get(name);//if we use get() the code execution stops due blocking nature of the get method , so here we are usg try_get()
-      $display("name=%0d",name);//we get empty string
+      $display("name=%0s",name);//we get empty string
       
       mbox.get(num);
       $display("num=%0d",num);//Now you get the ASCII packed int that came from "VLSI_DV",3rd value from mailbox([100,3,ascii values(default:1230980182),10])
