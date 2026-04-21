@@ -1,5 +1,6 @@
+//only 1 process can access the shared resource at a time
 module tb;
-  semaphore sem=new(1);
+  semaphore sem=new(1);//Now semaphore has 1 key → only one agent can access the resource at a time.
   initial begin
     sem.get(1);
     $display("agent1 starts writing into the resource");
