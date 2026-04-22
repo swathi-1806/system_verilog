@@ -1,5 +1,5 @@
 module tb;
-  semaphore sem=new();
+  
   initial begin
     $display("agent1 starts writing into the resource");
     #5;
