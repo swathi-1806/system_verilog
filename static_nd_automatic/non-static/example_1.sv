@@ -23,7 +23,9 @@ endmodule
 
 /*
 ------------------------------------------------------------------------------------------------------------------------------------------------------------
-since a is class variable , it remembers values between each call .
+- automatic/satic applies only to function's local variable
+- class properties always stored in the object
+- since a is class variable , it remembers values between each call .
 ------------------------------------------------------------------------------------------------------------------------------------------------------------
 output:
 # a=1
