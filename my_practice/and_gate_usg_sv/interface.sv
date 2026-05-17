@@ -12,6 +12,4 @@ interface and_if;
     clocking mon_cb @(posedge clk);
         input #1 a, b, y;
     endclocking
-
-	
 endinterface
