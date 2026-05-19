@@ -29,15 +29,15 @@ module bitwise_operators_demo;
     $display("~a      = %b", result);
 
     // Bitwise NAND
-    result = a ~& b;
+    result = ~(a & b);
     $display("a ~& b  = %b", result);
 
     // Bitwise NOR
-    result = a ~| b;
+    result = ~(a | b);
     $display("a ~| b  = %b", result);
 
     // Bitwise XNOR
-    result = a ~^ b;
+    result = ~(a^ b);
     $display("a ~^ b  = %b", result);
 
     $display("-------------------------");
@@ -45,3 +45,17 @@ module bitwise_operators_demo;
   end
 
 endmodule
+
+/*
+# a = 1101
+# b = 1011
+# -------------------------
+# a & b   = 1001
+# a | b   = 1111
+# a ^ b   = 0110
+# ~a      = 0010
+# a ~& b  = 0110
+# a ~| b  = 0000
+# a ~^ b  = 1001
+# -------------------------
+*/
