@@ -25,7 +25,8 @@ task run();
 		vif.a<=tx.a;
 		vif.b<=tx.b;
 		$display("%0t-->[BFM] a=%b  b=%b",$time,tx.a,tx.b);
-		//#10;
 	end
 endtask
 endclass
+
+
