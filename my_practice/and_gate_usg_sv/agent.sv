@@ -1,3 +1,4 @@
+
 class agent;
 
     generator gen;
