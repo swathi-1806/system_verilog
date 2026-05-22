@@ -1,3 +1,4 @@
+
 class sample;
   static int a;//static property
 
