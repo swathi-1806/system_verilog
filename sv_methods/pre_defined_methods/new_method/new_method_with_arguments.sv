@@ -16,6 +16,15 @@ class eth_pkt;
     len = e;
   endfunction
   
+  function void pre_randomize();
+    preamble.rand_mode(0);
+    sof.rand_mode(0);
+    sa.rand_mode(0);
+    da.rand_mode(0);
+    len.rand_mode(0);
+    payload.rand_mode(1);
+  endfunction
+  
   function void print();
     $display("---------------------------------------------------------------------------------------------------------------------");
     $display("preamble=%0d",preamble);
@@ -39,12 +48,11 @@ module tb;
   initial begin
     pkt=new(500,100,400,400,15);
    
-    //pkt.randomize();
+    pkt.randomize();
     pkt.print();
   end
 endmodule
   
-
 /*
 # ============with arguments===========
 # ---------------------------------------------------------------------------------------------------------------------
@@ -54,5 +62,5 @@ endmodule
 # da=400
 # len=15
 # crc=0
-# payload='{}
+# payload='{-51, -99, -18, -71, -68, -58, 20, 120, 111, 37, 31, -124, -1, 6, 115}
 */
