@@ -47,7 +47,6 @@ module tb;
   eth_pkt pkt;
   initial begin
     pkt=new(500,100,400,400,15);
-   
     pkt.randomize();
     pkt.print();
   end
