@@ -34,16 +34,21 @@ module tb;
     b_h = new();
     b_h.bank_name = "SBI";
 
+    // Display
+    b_h.show_bank();
+
     // Account object
     a_h = new();
     a_h.acc_holder = "Swathi";
     a_h.balance = 50000;
-
-    // Display
-    b_h.show_bank();
-
     a_h.display();
 
   end
 
 endmodule
+
+/*
+# Bank Name = SBI
+# Account Holder = Swathi
+# Balance        = 50000
+*/
