@@ -1,3 +1,5 @@
+//user defined vompare method
+
 class eth_pkt;
   rand bit [55:0]preamble;
   rand bit [7:0]sof;
