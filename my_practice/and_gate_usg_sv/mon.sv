@@ -1,5 +1,7 @@
 //monitor sends observed data to scoreboard and coverage
-
+//========================================================================================
+//monitor
+//========================================================================================
 class monitor;
   int count =0;
 //interface declaration
