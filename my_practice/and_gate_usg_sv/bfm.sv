@@ -1,5 +1,7 @@
 //bfm receives tx from the generator and sends those transactions to dut through interface
-
+//========================================================================================
+//bfm
+//========================================================================================
 class bfm;
 //mailbox declaration
 	mailbox #(transaction) gen2bfm;//same mailbox from generator
