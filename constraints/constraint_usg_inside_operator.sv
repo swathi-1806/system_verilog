@@ -2,9 +2,9 @@ class packet;
 
   rand bit [7:0] a;
 
-  constraint c_adder {
-    a inside {[50:100]};
-  }
+  constraint c1_a {
+   a inside {5,10,15,20};
+}
 
 endclass
 
@@ -27,14 +27,14 @@ module tb;
 endmodule
 
 /*
-a = 60
-a = 62
-a = 81
-a = 88
-a = 61
-a = 56
-a = 98
-a = 62
-a = 80
-a = 63
+a = 20
+a = 20
+a = 15
+a = 10
+a = 20
+a = 10
+a = 15
+a = 15
+a = 10
+a = 15
 */
