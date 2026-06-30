@@ -1,3 +1,7 @@
+//================================================================================================
+//muktiple constraints
+//================================================================================================
+
 class packet;
 
   rand bit [7:0] a;
@@ -10,28 +14,21 @@ class packet;
   constraint c2_b{
     b inside {[1000:1500]};
   }
-  
-
 endclass
 
 
 module tb;
-
   packet p;
-
+  
   initial begin
     p = new();
-
     repeat(10) begin
       if(p.randomize())
         $display("a = %0d", p.a);
-        $display("b= %0d", p.b);
-      
+        $display("b= %0d", p.b);   
       else
         $display("Randomization Failed");
     end
   end
 
 endmodule
-
-/
